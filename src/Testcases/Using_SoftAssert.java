@@ -17,7 +17,7 @@ public class Using_SoftAssert
 	@BeforeSuite
 	  public void beforeSuite()
 	  {
-		  System.out.println("!!!Before Suite");
+		  System.out.println("!!!Before Suite!!!!!!!!!");
 		  
 	  }
 	  @AfterSuite
