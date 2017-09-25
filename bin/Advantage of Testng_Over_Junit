@@ -1,0 +1,3 @@
+TestNG has better support for parallel execution of tests than JUNIT
+TestNG has better reporting than Junit.
+Using TestNG we can generate better XSLT reports extent reports than Junit.

@@ -1,0 +1,94 @@
+/* here for ant i took testng 6.8.5 jar file(latest version as per in video ish) included in c:\jars
+
+Ecipse--> is a tool for writing and executing programs through a user interface.
+Ant--> is a (Build and compile) tool and we can execute the programs through command prompt.
+
+Usage of ANT in different  situations.
+
+1. For some systems with UNIX and Linux we dont have user interface then we would use Ant.
+2. Suppose if we want execute tests through a bat file[(an executable file) if we click on this exe file we can execute all 
+   the tests. Then we use ANT.
+3. To integrate the framework in Jenkins.
+
+Requirements for ANT.
+1. Build.xml file is required.
+
+To execute the project we use testng.xmlfile .
+To execute the project through  ANT we use build.xml file.
+
+Build.xml file and its properties:
+
+	1) ws.home--> has a value= "${basedir}" this means that the directory where the build.xml is lying
+	              build.xml is under project name thus ws.home gives the path of the project.
+	2) ws.jars-->  value= " c:\jars" . This property gives the path where all the jar files are lying.
+	             We r telling ANT that through this path,the location of all the jar files that we are using in the project are present.
+	3) test.dest--> vluse = "${ws.home}/build" --> this represents the path of the build folder under the project 
+    
+    4) test.src-->	has a value = "${ws.home}/src"--> here ws.home gives path of the project and {ws.home}/src gives the
+	                path of the src folder under the project.   
+	5) ng.result --> value="test-output" --> this represents that the results of the testng run are presnt in test-output
+	                 folder   
+	   
+	There are different targets in build.xml.
+	
+	1) > ant compile --> 
+	   a.this command at the prompt complies the project and .class files are generated for all the 
+	     corresponding .java files that ae present in the src folder. All these .class files are generated under 
+	     build folder under the project. WE get this build folder by refrshing the project after ant compile.
+	   
+	   b. In the target compile of build.xml we have
+	      
+	      Firstly the ${test.dest} directory is deleted( ie the build dierectory is deleted).
+	      Then ant rebuilds this build directory again.
+	         
+	         <mkdir dir="${test.dest}">
+	         
+	      It compiles the entire project ie all the .java files in src and then generates . class files and put in 
+	      build directory.
+	       Thus we give 
+	       <javac 
+	          destdir= "${test.dest}" 
+	          srcdir=  "{test.src}"
+	          classpath= "test.classpath"
+	        >
+	        
+---> The target ant compile firstly deletes the Build folder ,then creates the build folder again and then compiles the project by
+     generating .classfiles corresponding to all .java files in src folder and puts all the .class files in the created Build folder 	        
+	        
+ ---> After target ant compile when we refresh the project we get test-output folder
+      and when the build is success after ant compile then we refresh the project then we get 
+      build folder with .class files in it.	        
+	        
+  2) Target run
+   
+    <target name="run" depends="compile">
+    
+    1. Here in target run of build.xml file  we need to specify the path of testng.xml file.
+    2. Ant will run all the tests as per testng.xml
+    3. with run target all the .class files that r specified in testng.xml are executed.
+       [ In the testng.xml we always include the .class files of the tests.]
+    4. And when we refresh the project we get under test-output folder deafult testng reports.
+    
+ ----> After target ant run when we refresh project we get under test-output folder all the default testng reports.
+    
+  3)  Target for generating better reports (ie XSLT Reports)
+  
+     <target name= "makexsltreports">
+     
+     1.For  generating the XSLT reports we need an xml file called testng-results.xsl file. Paste it in the projcet.
+     2.This is an standard file.
+     3. In the build.xml file under the target nam="makexsltreports"
+     
+     <xslt style= "testng-results.xsl" . Here we r speccifying the path of the testng-results.xsl file under the project.
+     
+     4. We should have below jar files in order to make XSLT reports. 
+            a. saxon 8.7
+            b. saxonLiaison the 2 jar files in the jars folder as specified in ws.jar
+            
+     5.With the target > ant makexsltreports fired at prompt
+       
+       This target reads the default reports(Testng results) present in test-output folder and then generates XSLT reports in  better way with
+       grahical representation like pie charts and so.
+       
+       If we refresh the project we have a XSLT-Reports folder generated under the prject the if we open index.html 
+       we have XSLT reports generated in the browser.                

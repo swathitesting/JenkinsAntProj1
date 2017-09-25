@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Learning TestNG]" parallel="tests">
+  <test name="RegisterTest(failed)" parallel="tests">
+    <classes>
+      <class name="Testcases.ApplicationTest">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Testcases.ApplicationTest -->
+      <class name="Testcases.LoginTest_ParameteriseTests">
+        <methods>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- Testcases.LoginTest_ParameteriseTests -->
+      <class name="Testcases.RegTest">
+        <methods>
+          <include name="registerTest"/>
+        </methods>
+      </class> <!-- Testcases.RegTest -->
+      <class name="Testcases.Using_SoftAssert">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Testcases.Using_SoftAssert -->
+    </classes>
+  </test> <!-- RegisterTest(failed) -->
+  <test name="Application Test(failed)" parallel="tests">
+    <classes>
+      <class name="Testcases.ApplicationTest">
+        <methods>
+          <include name="LoginTest"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Testcases.ApplicationTest -->
+      <class name="Testcases.LoginTest_ParameteriseTests">
+        <methods>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- Testcases.LoginTest_ParameteriseTests -->
+      <class name="Testcases.Using_SoftAssert">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Testcases.Using_SoftAssert -->
+    </classes>
+  </test> <!-- Application Test(failed) -->
+  <test name="assert_softassert(failed)" parallel="tests">
+    <classes>
+      <class name="Testcases.ApplicationTest">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Testcases.ApplicationTest -->
+      <class name="Testcases.LoginTest_ParameteriseTests">
+        <methods>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- Testcases.LoginTest_ParameteriseTests -->
+      <class name="Testcases.assert_softAssert">
+        <methods>
+          <include name="RegisterTest"/>
+        </methods>
+      </class> <!-- Testcases.assert_softAssert -->
+      <class name="Testcases.Using_SoftAssert">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Testcases.Using_SoftAssert -->
+    </classes>
+  </test> <!-- assert_softassert(failed) -->
+  <test name="Using_SoftAssert(failed)" parallel="tests">
+    <classes>
+      <class name="Testcases.ApplicationTest">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Testcases.ApplicationTest -->
+      <class name="Testcases.LoginTest_ParameteriseTests">
+        <methods>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- Testcases.LoginTest_ParameteriseTests -->
+      <class name="Testcases.Using_SoftAssert">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="PassWordChangeTest"/>
+          <include name="LogoutTest"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="LoginTest"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Testcases.Using_SoftAssert -->
+    </classes>
+  </test> <!-- Using_SoftAssert(failed) -->
+</suite> <!-- Failed suite [Learning TestNG] -->

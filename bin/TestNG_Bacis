@@ -1,0 +1,42 @@
+Puporse of TestNG
+
+1. Used to build Testcases, batch execution of testcases, optional excution of testcases
+   like skipping some tests
+   TestNG is used to build the TestCases using annotations.
+
+2. TestNG doesnt have a main function in it.
+
+3. It acts like a centralised controller and helps in 
+  
+  - reading XLS ,XML,Properties files and then 
+  - and calling the Test cases correspondingly (includes batch running of Testcases, skipping some,etc) 
+  - generate Reports along with screen shots of the errors encountered and 
+  - generating logs-> which helps us in knowing what happened at each and every moment when say some 
+                      500 Testcases are run for 10 hrs.    
+
+                      
+If we run the TestNG file we have
+ 1.In console we have proper o/p how many tests in that file have pased , failed or skipped   
+ 2.In reults of running class file window we have diagramatic representation of the Testcases.(pass-green,fail-red,skip-yellow)
+ 3.If we refresh the projetc we have Test-output folder and ope index.html in browser we have default TestNG reports. 
+   
+   
+   
+   Tests in the file are executed in alphabetical order. They are not executed in serial order  one after the other.
+   By setting the property priority we can have the order of execution of Testcases in a serial order according 
+     to the priorities.
+     
+     
+ From doubts
+ 
+ I was going through video Module 9 for test NG part 1 and 2 where assertion has explained very well. I just couldn't understand that if both "Assert" and "SoftAssert" are classes of TestNG and we have to import it to use it's all methods , Why there is difference the way we use it in the code.
+e.g. For softAssert we have to create a object where as for using Assert class functions we didn't have to create new object .
+Can you explain why we are creating object for softAssert but not for Assert class .
+
+
+Ans: In Assertion, text execution stops if assertion fails. So if we do not want to stop a test on failure and continue with execution then we will use "Soft assertions"
+
+     
+   
+               refer     http://testng.org/doc/eclipse.html--- documentation for testng
+               refer  testng.org/doc/documentation-main.html  --->documentation of TestNG

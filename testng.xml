@@ -1,0 +1,49 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Learning TestNG" parallel="tests">
+
+
+
+
+<test name="Application Test" allow-return-values="true">
+    <classes>
+        <class name="Testcases.ApplicationTest" />  
+    </classes>
+</test>
+
+<test name="LoginTest_Parameterise" allow-return-values="true">
+    <classes>
+        <class name="Testcases.LoginTest_ParameteriseTests" /> 
+    </classes>
+</test>
+
+<test name="RegisterTest" allow-return-values="true">
+    <classes>
+        <class name="Testcases.RegTest" /> 
+    </classes>
+</test>
+
+<test name="assert_softassert" allow-return-values="true">
+    <classes>
+        <class name="Testcases.assert_softAssert" /> 
+    </classes>
+</test>
+
+<test name="Using_SoftAssert" allow-return-values="true">
+    <classes>
+        <class name="Testcases.Using_SoftAssert" /> 
+    </classes>
+</test>
+
+<test name="Objectclass_Demo" allow-return-values="true">
+    <classes>
+        <class name="Testcases.Objectclass_Demo" /> 
+    </classes>
+</test>
+
+
+</suite>
+
+
+

@@ -1,0 +1,38 @@
+/* If we would like to batch run the Tests we do it by using testng.xml file.
+   In testng.xml file we specify the class nmaes of the tests in which order we want the tests to be executed 
+   serially one after the other.Here in the tetng.xml file we should include all the testcases of the project that we would
+   like to execute.
+   copy the testng.xml file into the current project it will be copied in the test-output folder.
+
+
+// refer to the testng.xml file in test-output folder
+
+// Running and exeuting testng.xml :  right click on the testng.xml file select run as Testng Suite.This executes all 
+   the testcases included in the testng.xml file srially one after the other.
+   
+// We can Refer  to test ng default reports generated in test-output folder as well.
+
+// all info regarding each n every test in the suite is generated in the reports.
+ // This is a TestSuite file having multiple tests and in which all the tests in the file run serially one after other
+ 
+ 
+ 
+ /* In testng.xml file all the tests can also be called parallely for parallel testing. ie namely ApplicationTest
+                                                                                          LoginTest_ParametersieTests
+                                                                                          RegTest 
+     
+     All tthe 3 tests are involked parallely  but when LoginTest_ParametersieTests is invoked the all the data sests are
+     invoked serially one after the other.                                                                                       
+     Becaz the  DataProvider in the LoginTest_ParametersieTests class, will send all the 3 datasets  to  the 
+     testcase doLoginTest one after the other serially. but if we want the 3 datasets to be executed paralely as well
+     then TestNG testng.xml file with( parallel= tests )only could not achieve this.
+     
+     Then in @DataProvider we give as below
+     @DataProvider(parallel = true) in  LoginTest_ParametersieTests.java file
+     
+     With parallel = tests as an attribute in testng.xml file we have all the mentioned tests being executed parallely
+     But only the 3 datasets of the LoginTest_ParametersieTests being executed serially.
+     
+     Therefore With  @DataProvider(parallel = true) and also (parallel= tests) in testNG.xml both included 
+     we have all the datasets aslo being executed parallely along with the tests that are mentioned in testNG.xml file
+     also being executed parallely.
